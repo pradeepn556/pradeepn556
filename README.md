@@ -2,7 +2,7 @@
 
 <p align="center">
   Full-stack developer building real-world tools that actually get used.<br/>
-  Based in Sydney 🇦🇺 &nbsp;|&nbsp; Vue 3 + React &nbsp;|&nbsp; No-backend by default
+  Based in Sydney 🇦🇺 &nbsp;
 </p>
 
 ---
@@ -75,7 +75,3 @@ A browser-based financial dashboard tracking net worth, investments, income, and
 </p>
 
 ---
-
-## 📫 Get in Touch
-
-[![Email](https://img.shields.io/badge/pradeepn556@gmail.com-D14836?style=flat-square&logo=gmail&logoColor=white)](mailto:pradeepn556@gmail.com)
