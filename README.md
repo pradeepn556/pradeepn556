@@ -59,6 +59,8 @@ A browser-based financial dashboard tracking net worth, investments, income, and
 
 **Highlights:** Net worth overview · Tranche-based investment lot tracking · Live market prices (ASX + NASDAQ + crypto) · Cash flow trends
 
+
+[![Live Demo](https://img.shields.io/badge/Live_Demo-4FC08D?style=flat-square)](https://pradeepn556.github.io/personal-finance-tracker/)
 [![Repo](https://img.shields.io/badge/Repo-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/pradeepn556/personal-finance-tracker)
 
 ---
