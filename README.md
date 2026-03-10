@@ -9,10 +9,7 @@
 
 ## 🧠 What I Build
 
-I focus on **production-ready apps** that solve real problems — point-of-sale systems for restaurants, personal finance dashboards, real-time multi-device tools. I spec first, then build lean and ship fast.
-
-> *"The value isn't in knowing how to write React. It's in knowing what to build, why it matters, and how to validate it works."*
-
+I focus on **production-ready apps** that solve real problems — My portfolio thus far include a point-of-sale systems for cafe/restaurants, personal finance dashboards, real-time multi-device tools. I spec first, then build lean and ship fast.
 ---
 
 ## 🛠️ Tech Stack
