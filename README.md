@@ -1,76 +1,83 @@
-<h1 align="center">Hey, I'm Pradeep 👋</h1>
+# Hey, I'm Pradeep 👋
 
-<p align="center">
-  Full-stack developer building real-world tools that actually get used.<br/>
-  Based in Sydney 🇦🇺 &nbsp;
-</p>
+**Product Specialist · Frontend Developer · Based in Sydney 🇦🇺**
 
----
-
-## 🧠 What I Build
-
-I focus on **production-ready apps** that solve real problems — My portfolio thus far include a point-of-sale systems for cafe/restaurants, personal finance dashboards, real-time multi-device tools. I spec first, then build lean and ship fast.
----
-
-## 🛠️ Tech Stack
-
-**Frontend**&nbsp;
-![Vue 3](https://img.shields.io/badge/Vue_3-4FC08D?style=flat-square&logo=vuedotjs&logoColor=white)
-![React](https://img.shields.io/badge/React_19-61DAFB?style=flat-square&logo=react&logoColor=black)
-![Vite](https://img.shields.io/badge/Vite-646CFF?style=flat-square&logo=vite&logoColor=white)
-![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white)
-
-**State & Cloud**&nbsp;
-![Pinia](https://img.shields.io/badge/Pinia-FFD859?style=flat-square&logo=vuedotjs&logoColor=black)
-![Firebase](https://img.shields.io/badge/Firebase_Firestore-FFCA28?style=flat-square&logo=firebase&logoColor=black)
-![Dexie.js](https://img.shields.io/badge/Dexie.js_%2F_IndexedDB-FF6B35?style=flat-square)
-
-**Charts & APIs**&nbsp;
-![ApexCharts](https://img.shields.io/badge/ApexCharts-008FFB?style=flat-square)
-![Recharts](https://img.shields.io/badge/Recharts-FF6384?style=flat-square)
-![Twelve Data](https://img.shields.io/badge/Twelve_Data-0052CC?style=flat-square)
-![CoinGecko](https://img.shields.io/badge/CoinGecko-8DC63F?style=flat-square)
-![Finnhub](https://img.shields.io/badge/Finnhub-1DB954?style=flat-square)
-
-**DevOps**&nbsp;
-![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=flat-square&logo=githubactions&logoColor=white)
-![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-222222?style=flat-square&logo=github&logoColor=white)
+I build production-ready tools that solve real problems — spec first, then build lean and ship. My background is frontend development; I now work at the intersection of product thinking and engineering, which means I know how to design the right thing *and* direct it being built with precision.
 
 ---
 
-## 🚀 Featured Projects
+## 🧠 How I Work
 
-### 🍽️ Café POS — Point of Sale System
-> Vue 3 · Pinia · Firebase Firestore · Dexie.js · ApexCharts · Vite · GitHub Actions
+Every project starts with a detailed spec — data models, UX flows, edge cases, and acceptance criteria — before a single line of code is written. That document is what makes builds fast and outputs reliable. I test with real data, diagnose bugs at root cause, and ship tools I actually use.
 
-A fully functional, cloud-synced POS built for a real café. Real-time multi-device sync — counter tablet, kitchen monitor, and manager's iPad all stay live via Firestore `onSnapshot()`. Customers order from their own phone by scanning a table QR code. No server. No monthly SaaS fee.
+---
 
-**Highlights:** QR self-ordering with addendum flow · Live kitchen dashboard with 🔔 new-item alerts · KOT + bill printing · Admin analytics · Dark/light mode
+## 🚀 Projects
 
-[![Live Demo](https://img.shields.io/badge/Live_Demo-4FC08D?style=flat-square)](https://pradeepn556.github.io/wh-pos/?demo=1)
-[![Repo](https://img.shields.io/badge/Repo-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/pradeepn556/wh-pos)
+### 📈 Alpha Market Engine (AME)
+`Python · yfinance · Cloudflare KV · launchd · Claude Code`
+
+A fully automated, private investment intelligence system for ASX + NASDAQ swing trading and long-term investing.
+
+**What it does:**
+- **Data pipeline** — fetches live portfolio + technicals (EMA 9/21/50/200, RSI, volume, phase) every morning, evening, and intraday via launchd scheduling
+- **Automated email reports** — daily morning signals briefing (pre-market) and EOD report (ASX close), both privacy-safe (public signals only)
+- **3-pool ASX market scanner** — RSI Reset, Panic Sell, and Smart Volume pools; HIGH CONVICTION badge when a stock appears in 2+ pools simultaneously
+- **Sector-aware overnight context** — maps each holding to its actual US indicator (ITA for defence stocks, GDX for gold miners, URA for uranium, not just generic NASDAQ)
+- **AME Dashboard** — live tab in the finance app showing Full Tank net worth, buy signals, market scan, and phase alerts; pushed via Cloudflare KV, auto-refreshes every 5 min
+- **Claude Code skills** — `/iw` (investing wizard), `/scan` (morning scan), `/phc` (portfolio health check) — each loads unified pipeline output + strategy framework automatically
+
+**Investment framework:** 4 Market Phases · 7-Rule Entry Checklist · O'Neil Sell Signals · Buffett principles for core positions · Position taxonomy (CORE / TACTICAL / LOTTERY TICKET)
 
 ---
 
 ### 💰 Personal Finance Tracker
-> React 19 · Vite · Tailwind CSS · Recharts · localStorage
+`React 19 · Vite · Tailwind CSS v4 · Recharts · localStorage`  
+**[▶ Live Demo](https://personal-finance-tracker-b8a.pages.dev)**
 
-A browser-based financial dashboard tracking net worth, investments, income, and expenses — entirely offline-first with no backend. Live ASX and US stock prices via Twelve Data + Finnhub. Crypto via CoinGecko. Bank statement CSV import with ANZ/Amex auto-detection and 17-category merchant auto-classification.
+A browser-based financial dashboard built from a 35-page product specification. Fully offline — no backend, no subscriptions, no data leaving your device.
 
-**Highlights:** Net worth overview · Tranche-based investment lot tracking · Live market prices (ASX + NASDAQ + crypto) · Cash flow trends
+**Five modules:** Net worth dashboard · Income tracking · Investment portfolio · Expense management · Settings
 
+**Notable engineering decisions:**
+- **Tranche-based portfolio model** — every purchase is a separate lot with its own cost basis, enabling accurate P&L on partial sells and multiple buy-ins
+- **Dual-exchange live pricing** — ASX (.AX suffix, AUD) via Twelve Data + US tickers via Finnhub, with exchange detection and a USD badge when pricing crosses over. CORS-verified with `curl` before writing any code — Alpha Vantage and Yahoo Finance were both disqualified this way
+- **Bank statement CSV import** — sign-convention auto-detection (ANZ Amex exports purchases as positive, opposite to standard). 17-category Australian merchant ruleset covering Woolworths, Coles, Chemist Warehouse, Telstra, Netflix, and more. 80%+ auto-categorisation rate on real ANZ data
+- **AME Dashboard tab** — live investment intelligence view integrated with the Alpha Market Engine pipeline
 
-[![Live Demo](https://img.shields.io/badge/Live_Demo-4FC08D?style=flat-square)](https://pradeepn556.github.io/personal-finance-tracker/)
-[![Repo](https://img.shields.io/badge/Repo-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/pradeepn556/personal-finance-tracker)
+---
+
+### 🍽️ Café POS — WINGHOUSE Point of Sale
+`Vue 3 · Pinia · Firebase Firestore · Dexie.js · Vite · Cloudflare Pages`  
+**[▶ Live App](https://wh-pos.pages.dev)**
+
+A fully functional, cloud-synced POS built for a real restaurant. Multi-device live sync — counter tablet, kitchen monitor, and manager's iPad all stay in sync via Firestore `onSnapshot()`. No server to manage. No monthly SaaS fee.
+
+**Key capabilities:**
+- **QR self-ordering** — customers scan a table-specific QR code and order from their phone; "Order More" appends to the same Firestore order, triggering a 🔔 badge on the kitchen dashboard
+- **Multi-cart (3 slots)** — independent cart slots with item-count badges; auto-switches to the next active cart after an order is placed
+- **KOT + bill printing** — opens native browser print dialog, works with USB/Bluetooth receipt printers; addendum print shows only newly added items
+- **Live dashboard** — elapsed time indicators (white / orange / red blinking), inline order editing, hot sellers panel with last-30-day rankings
+- **Admin module** — menu management, sales reports with CSV export, expense tracker, per-item revenue breakdown, monthly analytics, employee register, backup/restore
+- **Data split by purpose** — orders and settings in Firestore (cross-device, real-time); expenses, employees, and image cache in IndexedDB/Dexie (device-local, fast)
+
+---
+
+## 🛠️ Tech Stack
+
+| Layer | Technologies |
+|---|---|
+| **Frontend** | Vue 3 (Composition API), React 19, Tailwind CSS v4 |
+| **State** | Pinia, React hooks + localStorage |
+| **Cloud / Realtime** | Firebase Firestore, Cloudflare Pages, Cloudflare KV |
+| **Data & Charts** | ApexCharts, Recharts, yfinance |
+| **Build & DevOps** | Vite, GitHub Actions, launchd (macOS) |
+| **Backend / Scripting** | Python (data pipelines, email automation) |
+| **Local Storage** | Dexie.js / IndexedDB |
 
 ---
 
 ## 📊 GitHub Stats
 
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=pradeepn556&show_icons=true&theme=tokyonight&hide_border=true&count_private=true" height="150"/>
-  &nbsp;
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=pradeepn556&layout=compact&theme=tokyonight&hide_border=true" height="150"/>
-</p>
-
----
+![GitHub Stats](https://github-readme-stats.vercel.app/api?username=pradeepn556&show_icons=true&theme=dark&hide_border=true)
+![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=pradeepn556&layout=compact&theme=dark&hide_border=true)
